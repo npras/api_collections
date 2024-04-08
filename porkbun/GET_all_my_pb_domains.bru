@@ -1,0 +1,18 @@
+meta {
+  name: GET_all_my_pb_domains
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/domain/listAll
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "apikey": "{{api_key}}",
+    "secretapikey": "{{secret_key}}"
+  }
+}

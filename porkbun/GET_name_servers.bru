@@ -1,0 +1,18 @@
+meta {
+  name: GET_name_servers
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/domain/getNs/{{domain}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "apikey": "{{api_key}}",
+    "secretapikey": "{{secret_key}}"
+  }
+}

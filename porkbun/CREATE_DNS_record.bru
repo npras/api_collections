@@ -1,0 +1,18 @@
+meta {
+  name: CREATE_DNS_record
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/dns/create/{{domain}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "apikey": "{{api_key}}",
+    "secretapikey": "{{secret_key}}"
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: GET_ping
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/ping
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "apikey": "{{api_key}}",
+    "secretapikey": "{{secret_key}}"
+  }
+}
